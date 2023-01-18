@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating Forms</title>
+
+    <style>input {
+  border: 2px solid #000;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+body {
+  font: 1em sans-serif;
+  width: 200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+p * {
+  display: block;
+}
+
+input[type="email"] {
+  appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+</style>
+</head>
+<body>
+    <div>
+        <form action="#">
+            <div><textarea name="" id="" cols="30" rows="10" minlength="3"></textarea></div>
+            <div>
+                <label for="zip_code">Postal / Zip Code:</label>
+              </div>
+            
+              <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+            <div>
+    <label for="email">Email:</label>
+  </div>
+  <input type="email" id="email" name="email">
+
+  <div>
+    <label for="website">Website:</label>
+  </div>
+  <input type="url" id="website" name="website">
+  <label for="choose">Would you prefer a banana or cherry?</label>
+  <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry" />
+
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+        </form>
+    </div>
+  
+
+    <div>
+        <form novalidate> 
+            <p>
+              <label for="mail">
+                <span>a more indepth Javascript email validation:</span>
+                <input type="email" id="mail" name="mail" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+              </label>
+            </p>
+            <button>Submit</button>
+          </form>
+          
+    </div>
+    <script>
+        const email = document.getElementById('mail');
+        email.addEventListener('input', (event) => {
+            if(email.validity.typeMismatch) {
+                email.setCustomValidity('I am a custom error message!')
+            } else {
+                email.setCustomValidity('')
+            }
+        });
+    </script>
+</body>
+</html>

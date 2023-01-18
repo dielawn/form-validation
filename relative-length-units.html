@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Length Units</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    div.container>table>caption+thead>th*2+tr*15>td*2
+    <div class="container">
+        <table>
+            <caption>A table with relative length units and a discription of what it is relative to.</caption>
+            <thead>
+                <th>Unit</th>
+                <th>Relative to</th>
+                <tr>
+                    <td>em</td>
+                    <td>Font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width.</td>
+                </tr>
+                <tr>
+                    <td>ex</td>
+                    <td>x-height of the element's font.</td>
+                </tr>
+                <tr>
+                    <td>ch</td>
+                    <td>The advance measure (width) of the glyph "0" of the element's font.</td>
+                </tr>
+                <tr>
+                    <td>rem</td>
+                    <td>Font size of the root element.</td>
+                </tr>
+                <tr>
+                    <td>lh</td>
+                    <td>Line height of the element.</td>
+                </tr>
+                <tr>
+                    <td>rlh</td>
+                    <td>Line height of the root element. When used on the font-size or line-height properties of the root element, it refers to the properties' initial value.</td>
+                </tr>
+                <tr>
+                    <td>vw</td>
+                    <td>1% of the viewport's width.</td>
+                </tr>
+                <tr>
+                    <td>vh</td>
+                    <td>1% of the viewport's height.</td>
+                </tr>
+                <tr>
+                    <td>vmin</td>
+                    <td>1% of the viewport's smaller dimension.</td>
+                </tr>
+                <tr>
+                    <td>vmax</td>
+                    <td>1% of the viewport's larger dimension.</td>
+                </tr>
+                <tr>
+                    <td>vb</td>
+                    <td>1% of the size of the initial containing block in the direction of the root element's block axis.</td>
+                </tr>
+                <tr>
+                    <td>vi</td>
+                    <td>1% of the size of the initial containing block in the direction of the root element's inline axis.</td>
+                </tr>
+                <tr>
+                    <td>svw,<br> svh</td>
+                    <td>1% of the small viewport's width and height, respectively.</td>
+                </tr>
+                <tr>
+                    <td>lvw,<br> lvh</td>
+                    <td>1% of the large viewport's width and height, respectively.</td>
+                </tr>
+                <tr>
+                    <td>dvw,<br> dvh</td>
+                    <td>1% of the dynamic viewport's width and height, respectively.</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

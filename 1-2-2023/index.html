@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+        The Title of this webpage!
+    </h1>
+    <div id="container"></div>
+
+    
+    <!-- <button onclick="alert('hello world')">Click it</button>
+    <button id="btn">Hit it</button>
+    <button id="btn2">Smash it gently</button>
+    <button id="btn3">Touch it</button> -->
+
+    <button id="1">Caress it</button>
+    <button id="2">Fondle it</button>
+    <button id="3">Love it</button>
+
+<script>
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) =>{
+    button.addEventListener('click', () =>{
+        alert(button.textContent)
+    })
+})
+
+//     //works but only gets 1 onclick property
+// const btn = document.querySelector('#btn')
+// btn.onclick = () => alert('World Hello')
+
+// // const btn2 = document.querySelector('#btn2');
+// // btn2.addEventListener('click', () =>{
+// // alert('hellos again')
+// // });
+// // btn2.addEventListener('click', () => {
+// //     prompt("write it")
+// // });
+
+// // const btn3 = document.querySelector('#btn3')
+// // btn3.addEventListener('click', function (e){
+// //     console.log(e.target);
+// //     e.target.style.background = 'blue';
+// // })
+// // const buttons = document.querySelectorAll('.button');
+// // buttons.forEach(button) => {
+// //     button.addEventListener('click', () =>{
+// //         alert(button.id)
+// //     })
+// // }
+
+
+
+//looking at the container div
+const container = document.querySelector('#container');
+//creates a new div in memory but does not place it on the page
+const content = document.createElement('div');
+//gives the new div a class of content
+content.classList.add('content');
+//puts text into the content div
+content.textContent = 'This is the glorious text content!'
+//places the div as a child of the container div
+container.appendChild(content);
+
+const container2 = document.querySelector('#container')
+
+const note1 = document.createElement('p');
+note1.textContent = "Hey I'm red!";
+note1.style.color = 'red';
+
+const note2 = document.createElement('h3')
+note2.textContent = "I'm a blue h3!"
+note2.style.color = 'blue';
+
+container.appendChild(note1)
+container.appendChild(note2)
+//works 
+const newContent = document.createElement('div')
+newContent.style.cssText = "border: black; background-color: pink;"
+
+const note3 = document.createElement('h1')
+note3.textContent = "i'm in a div"
+
+container.appendChild(newContent);
+newContent.appendChild(note3)
+
+const note4 = document.createElement('p')
+note4.textContent = "ME TOO"
+
+newContent.appendChild(note4)
+
+
+
+
+
+</script>
+</body>
+</html>

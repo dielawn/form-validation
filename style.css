@@ -1,0 +1,85 @@
+html {
+    font-family: sans-serif;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: left;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+  .hex {
+    background-color: #86DEFA;
+  }
+  
+  .rgb {
+  background-color: rgb(134, 222, 250);
+  }
+  
+  .hsl {
+    background-color: hsl(194, 92%, 75%);
+  
+  }
+  
+  .transparency {
+  background-color: rgb(134, 222, 250, 0.6);
+  }
+  h1{
+    size: 50px;
+    
+  }
+  h2{
+    size: 2em;
+  }
+  p{
+    size: 16px;
+  }
+  h1+p{
+    size: 120%;
+  }
+
+  .container3 {    
+    display: flex;
+    color: #333;
+    font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+  }
+  .box {   
+    border: 5px solid #000;
+    width: 400px;
+    height: 200px; 
+    background-image: url(star.png);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  

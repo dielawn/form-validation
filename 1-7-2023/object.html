@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+   const person = {
+    name: ['dielawn', 'merkill'],
+    age: 39,
+    bio() {
+        console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    },
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name[0]}.`)
+    },    
+   }
+const myDataName = 'height';
+const myDataValue = '1.75m';
+person[myDataName] = myDataValue;
+
+person.height;
+
+   person.age = 45;
+   person['name']['last'] = 'Cratchit';
+   console.log(person)
+
+   person['eyes'] = 'hazel';
+   person.farewell = function () {
+    console.log('bye');
+   }
+console.log(person['eyes']);
+console.log(person.farewell());
+ console.log(person[0])
+
+function createPerson(name){
+    const obj = {};
+    obj.name = name;
+    obj.introduceSelf = function (){
+        console.log(`Hello I'm ${this.name}`)
+    }
+    return obj;
+}
+const salva = createPerson('Salva');
+salva.name;
+salva.introduceSelf();
+
+const frankie = createPerson('Frankie');
+frankie.name;
+frankie.introduceSelf();
+person.introduceSelf();
+
+    </script>
+</body>
+</html>
