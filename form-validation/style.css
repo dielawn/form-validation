@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    background-image: url("/home/dielawn/html-git/java-script/january23/images/hotsprings.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 100vh;
+    color: white;
+    width: 100vw;    
+    font-size: 16px;
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-top: 50px;
+
+}
+.form {
+    display: flex;
+}
+
+#contact {   
+    flex-direction: column;
+    margin: 25px;   
+}
+.input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+#full_name {
+    width: 200px;
+    height: 30px;
+}
+#phone {
+    width: 200px;
+    height: 30px;
+}
+textarea {
+    border-radius: 5px;
+    height: 10vh;
+    resize: none;
+}
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background: whitesmoke;
+    margin: 40px;
+    
+}
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    width: 40vw;
+  }
+#terms {
+    width: 5vw;
+    height: 2vh;
+    padding: 10px;
+    margin: 0;
+    
+    vertical-align: bottom;
+    position: relative;
+    
+    
+}
+.container {
+background-color: #999999;
+
+flex-wrap: wrap;
+border-radius: 25px;
+width: 50vw;
+height: fit-content;
+justify-content: center;
+align-items: center;
+}
+
+
+  @media only screen and (min-width: 700px) {                   
+    .form-row textarea {
+        width: 200px;
+    }
+    .form-row {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        justify-content: space-around;
+
+    }
+    .form-row input[type='text'] {
+        width: 250px;
+        height: initial;
+    }
+    .form-row label {
+        text-align: center;
+        width: 120px;
+        margin-top: 7px;
+        padding-right: 20px;
+    }  
+    #contact {
+        justify-content: center;
+        align-items: center;
+    }
+    #login {
+        align-items: flex-end;
+        text-align: end;
+        justify-content: flex-end;
+        
+        width: 100%;
+    }
+    p {
+        font-size: 15px;
+    }
+    button{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        background: whitesmoke;
+        margin: 0;
+        
+    }
+    #buttons {
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        align-items: top;
+        
+    }
+    body {
+    background-image: url("/home/dielawn/html-git/java-script/january23/images/hotsprings.jpg");
+    background-position: left; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to contain the entire image */
+    background-color: #cccccc;
+    height: 94vh;
+    color: white;
+    width: 100vw;    
+    font-size: 16px;
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+
+}
+ 
+}

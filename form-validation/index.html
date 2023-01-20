@@ -9,26 +9,65 @@
 </head>
 <body>
     <div class="container">
-        <form action="#">
+      
+        <form novalidate class="form">
+            
             <div id="contact">
-                <h1>Ski the Gnar!</h1>
+                <h1>Want to get away?</h1>
                 <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started. You know you want to.</h2>
-                <label for="full_name">Full Name</label>
-                <input type="text" id="full_name" name="full_name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassowrd">
+               <div class="form-row">
+                <p>
+                    <label for="full_name"></label>
+                    <span>Full Name</span>
+                    <input type="text" class="input" id="full_name" name="full_name" placeholder="John Doe" required>
+                    <span class="error"></span>
+                </p>  
+                <p>
+                    <label for="email"></label>
+                    <span>Email</span>
+                    <input type="email" class="input" id="email" name="email" placeholder="jdoe@mail.com" required>
+                    <span class="error"></span>
+                </p>           
+                </div>
+                <div class="form-row">
+                    <p>
+                        <label for="phone"></label>
+                        <span>Phone Number</span>
+                        <input type="text" class="input" id="phone" name="phone" placeholder="123-456-7890">
+                        <span class="error"></span>
+                    </p>                 
+                    <p>
+                        <label for="comment"></label>
+                        <span>Comments</span>
+                        <textarea type="text" class="input" id="comment" name="comment"></textarea>
+                        <span class="error"></span>
+                    </p>
+                </div>
+                <div class="form-row">    
+                    <p>
+                        <label for="password"></label>
+                        <span>Password</span>
+                        <input type="password" class="input" id="password"  name="password" minlength="8" required>
+                        <span class="error"></span>
+                    </p>                              
+                    <p>
+                        <label for="confirmPassword"></label>
+                        <span>Confirm Password</span>
+                        <input type="password" class="input" id="confirmPassword" name="confirmPassowrd" required>
+                        <span class="error"></span>
+                    </p>
+                  
+                </div>
+                <div id="terms">
+                    <label for="terms">Accept<a href="">User Agreement</a></label>
+                    <input class="input" type="checkbox" id="terms" name="terms" required>
+                </div>
+                <div class="form-row" id="buttons">                    
+                    <button id="submit" type="submit" >Submit</button>                
+                    <p>Already have an account <a href="">Login</a></p>
+                </div>
             </div>
-            <div class="buttons">
-                <label for="newsletter">Get it direct to your email</label>
-                <input type="checkbox" id="newsLetter" name="newsLetter">
-                <button id="submit" type="submit" >Create Your Account</button>
-            </div>
+            
         </form>
     </div>
     <script src="script.js"></script>
