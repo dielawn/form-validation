@@ -1,0 +1,169 @@
+:root {
+  --default: url(images/summer.jpg);
+  --summer: url(images/summer2.jpg);
+  --winter: url(images/winter.jpg);
+  --radius: 10px;
+  --backgroundColor: #ccc;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(images/summer.jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+       
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .backgroundColor {
+  justify-content: center;
+  
+
+}
+.header {
+  justify-content: center;
+  width: 95vw;
+  height: 10vh;
+  background-color: var( --backgroundColor);
+ 
+  border-radius: 10px;
+}
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.description {
+  width: 30vw;
+  height: 20vh;
+  text-align: center;
+}
+.formContainer{
+ 
+  width: fit-content;
+  background-color: var( --backgroundColor);
+  border-radius: var(--radius);
+  padding: 15px;
+}
+.form-row {
+  margin-bottom:  40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-row> input {
+  height: 30px;
+  border-radius: var(--radius);
+  border: none;
+}
+textarea {
+  border-radius: var(--radius);
+  border: none;
+  resize: none;
+  padding: 10px;
+}
+form> header {
+  text-align: start;
+  font-size: 30px;
+  margin-bottom:  40px;
+}
+#final-row {
+  justify-content: flex-start;
+  position: relative;
+}
+.form-row input {
+  padding: 10px;
+  font-size: 14px;
+}
+.form-row .instructions {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+/* This is our style for the invalid fields */
+input:invalid {
+  background-color: #fdd;
+}
+      
+input:focus:invalid {
+  outline: none;
+}
+.error{
+  color:red;
+}
+#message{
+  background-color: #2196F3;
+  color: black;
+  font-size: .75em;
+  padding: 7px;
+  border-radius: var(--radius);
+
+}

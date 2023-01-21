@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Programs</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <label for="seasonSelect" class="switch">
+                <input type="checkBox" id="seasonSelect" name="seasonSelect">
+                <span class="slider round"></span>
+            </label>
+        <h1 id="seasonHeader">Winter or Summer in Yellowstone</h1>
+        </header>
+    <div class="description">
+       <p id="seasonDescription"><em>Winter or Summer? Each season offers unique experiences. Summer adventures include hiking, wildlife watching, backpacking and more. In winter catch a ride in a snow coach to a trailhead and go for a ski! Select your season adventure.</em></p>
+    </div>
+    <div class="formContainer">
+        <form action="#">
+            <header>Enroll in a program</header>
+            <div class="form-row">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Jane Doe">
+       
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jdoe@email.com">
+                <span id="error"></span>            
+            </div>
+            <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+           
+                <label for="comment">Comment</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" name="comment">
+                </textarea>
+            </div>
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                
+                <label for="confirmPwd">Confirm Password</label>
+                <input type="password" id="confirmPwd">
+            </div>
+            <div class="form-row" id="final-row">
+                <p>Already a member?</p>
+                <a href="" id="login">Login</a>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+       
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
