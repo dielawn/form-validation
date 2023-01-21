@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Email Validation Mobile</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --padding: 7px;
+            --border: solid 1px black;
+            --radius: 5px;
+            --background-color: white;
+            --message-background: purple;
+            --input-background-color: lightgray;
+            --font-color: white;
+            --input-width: 200px;
+            --font: Impact;
+            --font-alternate: sans-serif;
+        }
+        body{
+            background-color: var(--background-color);
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-alternate);
+        }
+       #email {
+        padding: var(--padding);
+        border: var(--border);
+        border-radius: var(--radius);
+        background-color: var(--input-background-color);
+        color: var(--font-color-dark);
+        width: var(--input-width);
+        font-family: var(--font), var(--font-alternate)
+       }
+       label{
+        padding: var(--padding);
+       }
+       #emailMessage{
+        color: var(--font-color);
+        width: 150px;
+        height: 20px;
+        font-size: .75em;
+        padding: var(--padding);
+       }
+    </style>
+</head>
+<body>
+    div.container>form>label+input#email+div#message
+    <div class="container">
+        <form action="">
+            <label for="email">Email Address: </label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="jdoe@mail.com" 
+                required>
+            <div id="emailMessage"></div>
+        </form>
+    </div>
+
+<script>
+
+const email = document.getElementById('email')
+const popUpMsg = document.getElementById('emailMessage');
+popUpMsg.style.display = 'none';
+popUpMsg.innerText = '';
+
+email.onfocus = function() {    
+    popUpMsg.style.position = 'relative'
+    popUpMsg.style.display = 'inline-block';     
+}
+
+email.onblur = function() {
+    popUpMsg.style.display = 'none';
+    popUpMsg.style.position = 'none'
+    popUpMsg.innerText = ''
+}
+const form = document.querySelector('form');
+const emailInput = document.getElementById('email');
+const error = document.getElementById('emailMessage');
+
+email.addEventListener('input', (event) => {
+    if (email.validity.valid) {
+    console.log('valid')    
+    popUpMsg.innerText = null;    
+    popUpMsg.style.backgroundColor = '';
+    return
+    }
+    console.log('invalid')
+    popUpMsg.style.position = 'absolute'
+    popUpMsg.style.backgroundColor = 'var(--message-background)'
+    popUpMsg.innerText = "Invalid needs '@' symbol"
+});
+</script>
+</body>
+</html>
