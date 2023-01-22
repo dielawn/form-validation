@@ -1,53 +1,119 @@
  *{
-            margin: 0;
-            padding: 0;
-        }
-        :root{
-            --padding: 7px;
-            --border: solid 1px black;
-            --radius: 5px;
-            --background-color: white;
-            --message-background: purple;
-            --input-background-color: lightgray;
-            --font-color: white;
-            --input-width: 200px;
-            --font: Impact;
-            --font-alternate: sans-serif;
-        }
-        body{
-            background-color: var(--background-color);
-            
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            font-family: var(--font-alternate);
-        }
-        #password,
-        #confirmPwd,
-        #email,
-        #full_name,
-        #phone{
-        padding: var(--padding);
-        border: var(--border);
-        border-radius: var(--radius);
-        background-color: var(--input-background-color);
-        color: var(--font-color-dark);
-        width: var(--input-width);
-        }
-        #passwordMsg {
-            font-size: 12px;
-            
-        }
-        #required {
-            color: black;
-        }
-        #submit{
-        padding: var(--padding);
-        border: var(--border);
-        border-radius: var(--radius);
-        background-color: var(--input-background-color);
-        color: var(--font-color-dark);
-        margin: 10px;
-        width: 100px;
-        }
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'norsebold';
+    src: url('font/norse-bold-webfont.woff2') format('woff2'),
+        url('font/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --padding: 7px;
+    --border: solid 1px black;
+    --radius: 5px;
+    --background-color: white;
+    --message-background: purple;
+    --input-background-color: lightgray;
+    --font-color: black;
+    --input-width: 200px;
+    --font: 'norse-bold-webfont';
+    --font-alternate: sans-serif;
+}
+body{
+    background-color: var(--background-color);
+    background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+#password,
+#confirmPwd,
+#email,
+#first_name,
+#last_name,
+#phone{
+    padding: var(--padding);
+    border: var(--border);
+    border-radius: var(--radius);
+    background-color: var(--input-background-color);
+    color: black;
+    width: var(--input-width);
+}
+#passwordMsg {
+    font-size: 12px;    
+}
+#required {
+    color: black;
+}
+#submit{
+    align-items: center;
+    padding: var(--padding);
+    border: none;
+    border-radius: var(--radius);
+    background-color:#596D48;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    font-weight: 600;
+}
+label,
+header{
+    color: black;
+    font-family: 'norsebold';
+}
+.logo{
+    justify-content: center; 
+    align-items: center;       
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.5);
+    height: 20vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    font-family:'norsebold';
+}
+h2{
+    font-family:'norsebold';
+    color: white;
+}
+img{
+    height: 15vh;
+    position: relative;
+}
+.description{
+    width: 80vw;
+    margin: 20px;
+}
+#description{
+    color: white;
+}
+
+label{
+    padding-top: 15px;
+}
+#log-in{
+    text-align: center;
+    font-size: .8em;
+}
+a{
+    text-decoration: none; 
+    color: #596D48;
+    font-weight: 800;
+}

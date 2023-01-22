@@ -69,7 +69,7 @@ confirmPwd.addEventListener('input', (event) => {
 });
 submitBtn.disabled = true;
 function matchPassword() {    
-    if(password.value == confirmPwd.value){
+    if(password.value == confirmPwd.value && password.value != ''){
         submitBtn.disabled = false;
         console.log(`Password =${password.value} Confirm = ${confirmPwd.value}`)
         matchMsg.innerText = 'Match'
