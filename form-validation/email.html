@@ -17,7 +17,7 @@
             --background-color: white;
             --message-background: purple;
             --input-background-color: lightgray;
-            --font-color: white;
+            --font-color: black;
             --input-width: 200px;
             --font: Impact;
             --font-alternate: sans-serif;
@@ -63,43 +63,46 @@
                 name="email" 
                 placeholder="jdoe@mail.com" 
                 required>
-            <div id="emailMessage"></div>
+            <div id="emailMessage">
+                <p id="validEmail"></p>
+            </div>
         </form>
     </div>
 
 <script>
-
+//input
 const email = document.getElementById('email')
-const popUpMsg = document.getElementById('emailMessage');
-popUpMsg.style.display = 'none';
-popUpMsg.innerText = '';
+
+//text element
+const emailMsg = document.getElementById('validEmail');
 
 email.onfocus = function() {    
-    popUpMsg.style.position = 'relative'
-    popUpMsg.style.display = 'inline-block';     
+    emailMsg.style.position = 'relative'
+    emailMsg.style.display = 'inline-block';     
 }
 
 email.onblur = function() {
-    popUpMsg.style.display = 'none';
-    popUpMsg.style.position = 'none'
-    popUpMsg.innerText = ''
+    emailMsg.style.display = 'none';
 }
-const form = document.querySelector('form');
-const emailInput = document.getElementById('email');
-const error = document.getElementById('emailMessage');
 
 email.addEventListener('input', (event) => {
+   checkEmail()    
+});
+
+function checkEmail() {
+    emailMsg
     if (email.validity.valid) {
     console.log('valid')    
-    popUpMsg.innerText = null;    
-    popUpMsg.style.backgroundColor = '';
+   
+    emailMsg.textContent = '';   
     return
     }
-    console.log('invalid')
-    popUpMsg.style.position = 'absolute'
-    popUpMsg.style.backgroundColor = 'var(--message-background)'
-    popUpMsg.innerText = "Invalid needs '@' symbol"
-});
+    emailMsg.innerText = "Requires '@' "
+    emailMsg.style.color = 'red'
+    emailMsg.style.position = 'relative'
+    emailMsg.style.display = 'inline-block'    
+   
+}
 </script>
 </body>
 </html>

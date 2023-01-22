@@ -1,0 +1,53 @@
+ *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --padding: 7px;
+            --border: solid 1px black;
+            --radius: 5px;
+            --background-color: white;
+            --message-background: purple;
+            --input-background-color: lightgray;
+            --font-color: white;
+            --input-width: 200px;
+            --font: Impact;
+            --font-alternate: sans-serif;
+        }
+        body{
+            background-color: var(--background-color);
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-alternate);
+        }
+        #password,
+        #confirmPwd,
+        #email,
+        #full_name,
+        #phone{
+        padding: var(--padding);
+        border: var(--border);
+        border-radius: var(--radius);
+        background-color: var(--input-background-color);
+        color: var(--font-color-dark);
+        width: var(--input-width);
+        }
+        #passwordMsg {
+            font-size: 12px;
+            
+        }
+        #required {
+            color: black;
+        }
+        #submit{
+        padding: var(--padding);
+        border: var(--border);
+        border-radius: var(--radius);
+        background-color: var(--input-background-color);
+        color: var(--font-color-dark);
+        margin: 10px;
+        width: 100px;
+        }
