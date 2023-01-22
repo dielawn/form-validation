@@ -24,25 +24,33 @@
 }
 
 body{
-    background-color: black;
+    background-color: var(--background-color);
     background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
-    background-repeat: no-repeat;
+    background-size: contain;
+   background-repeat: no-repeat;
+    background-position: 5vw;
     background-size: 100vh;
+flex-direction: column;
+    background-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    width: 100vw;
     align-items: center;
     font-size: 1rem;
 }
 form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 20px;
     border: solid 1px white;
     border-radius: 10px;
     background-color: white;
     color: black;
-    width: fit-content;
+   height: 248px;
+   width: 450px;
+ 
+  
 }
 #password,
 #confirmPwd,
@@ -71,7 +79,7 @@ form {
     background-color:#596D48;
     color: white;
     margin-top: 20px;
-    width: 100%;
+    width: 150px;
     height: 40px;
     font-weight: 600;
 }
@@ -81,15 +89,16 @@ header{
     font-family: 'norsebold';
 }
 .logo{
-    justify-content: center; 
-    align-items: center;       
+    justify-content: center;
+    align-items: start;       
     font-size: 3rem;
     background-color: rgba(0,0,0,0.5);
     height: 20vh;
-    width: 100vw;
+    width: 300vw;
     color: white;
     display: flex;
     font-family:'norsebold';
+   
 }
 h2{
     font-family:'norsebold';
@@ -99,13 +108,7 @@ img{
     height: 15vh;
     position: relative;
 }
-.description{
-    width: 80vw;
-    margin: 20px;
-}
-#description{
-    color: white;
-}
+
 
 label{
     padding-top: 15px;
@@ -119,6 +122,8 @@ a{
     color: #596D48;
     font-weight: 800;
 }
-.container {
-    justify-content: center;
+#description{
+    color: white;
+    width: 650px;
+    margin: 50px;
 }
