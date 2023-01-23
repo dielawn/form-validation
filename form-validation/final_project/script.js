@@ -118,3 +118,4 @@ function checkEmail() {
     emailMsg.style.display = 'inline-block'    
    
 }
+
